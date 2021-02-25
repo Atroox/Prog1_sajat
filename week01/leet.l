@@ -56,7 +56,7 @@
 		if (leetdict[i].c == tolower(*yytext)){
 			int r = 1+(int) (100.0*rand()/RAND_MAX+1.0);
 
-			printf("%s", leetdict[i].leet[0]);
+			printf("%s", leetdict[i].leet[3]);
 			found = 1;
 			break;
 		}
