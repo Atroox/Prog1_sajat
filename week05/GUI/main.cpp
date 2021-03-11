@@ -44,11 +44,17 @@ int main()
 
 	Function sl_cos(sloping_cos, rmin, rmax, origo, n_points, xscale, yscale);
 
+	Axis x {Axis::x, Point{20, y_orig}, xlength, xlength/xscale, "x"};
+
+	Axis y {Axis::y, Point{x_orig, ylength + 20}, ylength, ylength/yscale, "y"};
+
 
 	win.attach(s);
 	win.attach(sl);
 	win.attach(sq);
 	win.attach(sl_cos);
+	win.attach(x);
+	win.attach(y);
 
     win.wait_for_button();
 
