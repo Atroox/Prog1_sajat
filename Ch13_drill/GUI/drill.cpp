@@ -35,7 +35,6 @@ int main()
 
 	win.wait_for_button();
 
-    // 4. Add 3 copies of a 200x200 image
 	Image cpp1 {Point{0,300}, "cpp.gif"};
 	Image cpp2 {Point{300,600}, "cpp.gif"};
 	Image cpp3 {Point{600,100}, "cpp.gif"};
