@@ -10,7 +10,18 @@ void printout(const C& c)
 template<typename T, int N>
 struct my_array {
 
+	using value_type = T;
+	using iterator = T*;
+	using const_iterator = const T*;
+	using size_type = unsigned int;
+
 	T elem[N];
+
+	iterator begin() { return elem; }
+	const_iterator begin() const { return elem; }
+	iterator end() { return elem+N; }
+	const_iterator end() const { return elem[N]; }
+
 
 	T& operator[](int n) { return elem[n]; }
 	const T& operator[](int n) const { return elem[n]; }
@@ -34,6 +45,11 @@ int main()
 
 	vector<int> iv = {10,20,30,40,50};
 	printout(iv);
+
+	cout << "Range for double_array" << endl;
+
+	for (const auto& e : double_array)
+		cout << e << endl;
 
 	return 0;
 }
